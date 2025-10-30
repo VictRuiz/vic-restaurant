@@ -1,10 +1,15 @@
+// Importar estilos PRIMERO
 import './style.css';
+
+// Importar módulos
 import loadHome from './modules/home';
 import loadMenu from './modules/menu';
 import loadContact from './modules/contact';
 
-// Inicializar la página
+// Esperar a que el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('🎨 Vic Restaurant cargando...');
+    
     // Cargar página de inicio
     loadHome();
 
@@ -37,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
         loadContact();
         setActiveButton(contactBtn);
     });
+    
+    console.log('✅ Vic Restaurant cargado correctamente');
 });
 
 // Función para activar botón
